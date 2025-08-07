@@ -10,7 +10,7 @@ kwargs = {
 
 
 def test_sft():
-    from swift.llm import sft_main, TrainArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, TrainArguments, infer_main, sft_main
     result = sft_main(
         TrainArguments(
             model='Qwen/Qwen2.5-7B-Instruct',
@@ -24,7 +24,7 @@ def test_sft():
 
 def test_mllm_dpo():
     os.environ['MAX_PIXLES'] = f'{1280 * 28 * 28}'
-    from swift.llm import rlhf_main, RLHFArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, RLHFArguments, infer_main, rlhf_main
     result = rlhf_main(
         RLHFArguments(
             rlhf_type='dpo',

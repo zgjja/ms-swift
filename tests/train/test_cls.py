@@ -12,7 +12,7 @@ kwargs = {
 
 
 def test_llm():
-    from swift.llm import TrainArguments, sft_main, infer_main, InferArguments
+    from swift.llm import InferArguments, TrainArguments, infer_main, sft_main
     result = sft_main(
         TrainArguments(
             model='Qwen/Qwen2.5-1.5B-Instruct',
@@ -27,7 +27,7 @@ def test_llm():
 
 def test_bert():
 
-    from swift.llm import TrainArguments, sft_main, infer_main, InferArguments
+    from swift.llm import InferArguments, TrainArguments, infer_main, sft_main
     result = sft_main(
         TrainArguments(
             model='answerdotai/ModernBERT-base',
@@ -42,7 +42,7 @@ def test_bert():
 
 
 def test_mllm():
-    from swift.llm import TrainArguments, sft_main, infer_main, InferArguments
+    from swift.llm import InferArguments, TrainArguments, infer_main, sft_main
     result = sft_main(
         TrainArguments(
             model='OpenGVLab/InternVL2-1B',

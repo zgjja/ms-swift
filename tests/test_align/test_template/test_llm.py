@@ -1,6 +1,5 @@
-import os
-
 import json
+import os
 import torch
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
@@ -176,6 +175,7 @@ def test_glm_edge():
 
 def test_llama():
     from swift.llm import VllmEngine
+
     # pt_engine = PtEngine('LLM-Research/Meta-Llama-3.1-8B-Instruct-BNB-NF4')
     # pt_engine = PtEngine('LLM-Research/Meta-Llama-3.1-8B-Instruct')
     # pt_engine = PtEngine('LLM-Research/Meta-Llama-3-8B-Instruct')

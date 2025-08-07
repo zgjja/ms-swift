@@ -331,8 +331,9 @@ def test_hunyuan():
 
 
 if __name__ == '__main__':
+    from swift.llm import InferRequest, PtEngine, RequestConfig, load_dataset
     from swift.plugin import agent_templates
-    from swift.llm import PtEngine, InferRequest, RequestConfig, load_dataset
+
     # test_react_en()
     # test_react_zh()
     # test_qwen_en()

@@ -1,6 +1,5 @@
 # Copyright (c) Alibaba, Inc. and its affiliates.
 import os
-
 from openai import OpenAI
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -46,7 +45,7 @@ def run_client(host: str = '127.0.0.1', port: int = 8000):
 
 
 if __name__ == '__main__':
-    from swift.llm import run_deploy, DeployArguments
+    from swift.llm import DeployArguments, run_deploy
     with run_deploy(
             DeployArguments(
                 model='Qwen/Qwen3-Embedding-0.6B',  # GME/GTE models or your checkpoints are also supported

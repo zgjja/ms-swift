@@ -26,7 +26,7 @@ kwargs = {
 
 
 def test_resume_from_checkpoint():
-    from swift.llm import sft_main, TrainArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, TrainArguments, infer_main, sft_main
     result = sft_main(TrainArguments(**kwargs))
     last_model_checkpoint = result['last_model_checkpoint']
     last_model_checkpoint = last_model_checkpoint.replace('checkpoint-10', 'checkpoint-5')

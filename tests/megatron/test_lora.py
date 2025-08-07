@@ -4,7 +4,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 
 
 def test_sft():
-    from swift.megatron import megatron_sft_main, MegatronTrainArguments
+    from swift.megatron import MegatronTrainArguments, megatron_sft_main
     megatron_sft_main(
         MegatronTrainArguments(
             load='Qwen2.5-3B-Instruct-mcore',
@@ -29,7 +29,7 @@ def test_sft():
 
 
 def test_moe():
-    from swift.megatron import megatron_sft_main, MegatronTrainArguments
+    from swift.megatron import MegatronTrainArguments, megatron_sft_main
     megatron_sft_main(
         MegatronTrainArguments(
             load='Qwen1.5-MoE-A2.7B-mcore',
@@ -56,7 +56,7 @@ def test_moe():
 
 
 def test_convert():
-    from swift.llm import export_main, ExportArguments
+    from swift.llm import ExportArguments, export_main
     export_main(ExportArguments(
         mcore_adapters=['megatron_output/vx-xxx'],
         to_hf=True,

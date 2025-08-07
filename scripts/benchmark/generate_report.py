@@ -1,11 +1,10 @@
 # Copyright (c) Alibaba, Inc. and its affiliates.
 import dataclasses
+import json
+import numpy as np
 import os
 from dataclasses import dataclass
 from typing import Any, Dict, List
-
-import json
-import numpy as np
 
 from swift.llm.template import split_str_parts_by
 

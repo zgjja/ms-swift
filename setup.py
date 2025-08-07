@@ -1,7 +1,8 @@
 # Copyright (c) Alibaba, Inc. and its affiliates.
 # !/usr/bin/env python
-import os
 from setuptools import find_packages, setup
+
+import os
 from typing import List
 
 
@@ -11,7 +12,7 @@ def readme():
     return content
 
 
-version_file = 'swift/version.py'
+version_file = 'src/swift/version.py'
 
 
 def get_version():
@@ -136,14 +137,14 @@ if __name__ == '__main__':
         author_email='contact@modelscope.cn',
         keywords='python, petl, efficient tuners',
         url='https://github.com/modelscope/swift',
-        packages=find_packages(exclude=('configs', 'demo')),
+        package_dir={'': 'src'},
+        packages=find_packages('src', exclude=('configs', 'demo')),
         include_package_data=True,
         package_data={
             '': ['*.h', '*.cpp', '*.cu'],
         },
         classifiers=[
             'Development Status :: 4 - Beta',
-            'License :: OSI Approved :: Apache Software License',
             'Operating System :: OS Independent',
             'Programming Language :: Python :: 3',
             'Programming Language :: Python :: 3.8',

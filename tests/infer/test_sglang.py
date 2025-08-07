@@ -4,7 +4,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 
 def test_engine():
-    from swift.llm import SglangEngine, load_dataset, RequestConfig
+    from swift.llm import RequestConfig, SglangEngine, load_dataset
     dataset = load_dataset('AI-ModelScope/alpaca-gpt4-data-zh#20')[0]
     engine = SglangEngine('Qwen/Qwen2.5-0.5B-Instruct')
     request_config = RequestConfig(max_tokens=1024)
@@ -17,7 +17,7 @@ def test_engine():
 
 
 def test_engine_stream():
-    from swift.llm import SglangEngine, load_dataset, RequestConfig
+    from swift.llm import RequestConfig, SglangEngine, load_dataset
     dataset = load_dataset('AI-ModelScope/alpaca-gpt4-data-zh#1')[0]
     engine = SglangEngine('Qwen/Qwen2.5-0.5B-Instruct')
     request_config = RequestConfig(max_tokens=1024, stream=True)
@@ -29,7 +29,7 @@ def test_engine_stream():
 
 
 def test_infer():
-    from swift.llm import infer_main, InferArguments
+    from swift.llm import InferArguments, infer_main
     infer_main(
         InferArguments(model='Qwen/Qwen2.5-0.5B-Instruct', stream=True, infer_backend='sglang', max_new_tokens=2048))
 

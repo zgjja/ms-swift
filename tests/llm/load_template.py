@@ -1,8 +1,7 @@
 import argparse
-from collections.abc import Mapping
-
 import json
 import torch
+from collections.abc import Mapping
 from transformers import PreTrainedTokenizerBase
 
 
@@ -79,8 +78,7 @@ def load_ds_old(ds):
 def load_and_tokenize_old(ms_model_id, template):
     model_type = None
     model_info = None
-    from swift.llm import get_model_tokenizer
-    from swift.llm import get_template, MODEL_MAPPING
+    from swift.llm import MODEL_MAPPING, get_model_tokenizer, get_template
     found = False
     for model_type, model_info in MODEL_MAPPING.items():
         if model_info['model_id_or_path'].lower() == ms_model_id.lower():

@@ -1,6 +1,6 @@
 repos:
   - repo: /home/admin/pre-commit/flake8
-    rev: 4.0.0
+    rev: 7.3.0
     hooks:
       - id: flake8
         exclude: |
@@ -10,7 +10,7 @@ repos:
                 tests/run.py
             )$
   - repo: /home/admin/pre-commit/isort
-    rev: 4.3.21
+    rev: 6.0.1
     hooks:
       - id: isort
         exclude: |

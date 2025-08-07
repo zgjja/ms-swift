@@ -1,7 +1,6 @@
+import numpy as np
 import os
 import re
-
-import numpy as np
 
 from swift.llm import DATASET_MAPPING, EncodePreprocessor, get_model_tokenizer, get_template, load_dataset
 from swift.utils import stat_array

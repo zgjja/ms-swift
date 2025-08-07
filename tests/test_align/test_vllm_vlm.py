@@ -154,7 +154,8 @@ def test_glm4_1v():
 
 
 if __name__ == '__main__':
-    from swift.llm import VllmEngine, InferRequest, RequestConfig
+    from swift.llm import InferRequest, RequestConfig, VllmEngine
+
     # test_qwen2_vl()
     # test_qwen2_5_vl()
     # test_deepseek_vl_v2()

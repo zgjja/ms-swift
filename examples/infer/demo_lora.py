@@ -60,8 +60,8 @@ def infer_lora(infer_request: 'InferRequest'):
 
 
 if __name__ == '__main__':
-    from swift.llm import (PtEngine, RequestConfig, AdapterRequest, get_template, BaseArguments, InferRequest,
-                           safe_snapshot_download, get_model_tokenizer)
+    from swift.llm import (AdapterRequest, BaseArguments, InferRequest, PtEngine, RequestConfig, get_model_tokenizer,
+                           get_template, safe_snapshot_download)
     from swift.tuners import Swift
     infer_request = InferRequest(messages=[{'role': 'user', 'content': 'who are you?'}])
     # infer_lora(infer_request)

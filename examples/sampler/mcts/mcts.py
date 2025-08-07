@@ -1,10 +1,9 @@
+import json
 import os
 import subprocess
 import time
-from typing import List
-
-import json
 from modelscope.msdatasets import MsDataset
+from typing import List
 
 conda_prefix = ''
 

@@ -11,7 +11,7 @@ kwargs = {
 
 
 def test_rm():
-    from swift.llm import rlhf_main, RLHFArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, RLHFArguments, infer_main, rlhf_main
     result = rlhf_main(
         RLHFArguments(
             rlhf_type='rm',
@@ -24,7 +24,7 @@ def test_rm():
 
 
 def test_ppo():
-    from swift.llm import rlhf_main, RLHFArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, RLHFArguments, infer_main, rlhf_main
     result = rlhf_main(
         RLHFArguments(
             rlhf_type='ppo',
@@ -37,7 +37,7 @@ def test_ppo():
 
 
 def test_ppo2():
-    from swift.llm import rlhf_main, RLHFArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, RLHFArguments, infer_main, rlhf_main
     result = rlhf_main(
         RLHFArguments(
             rlhf_type='ppo',
@@ -52,7 +52,7 @@ def test_ppo2():
 def test_ppo_vl():
     # PPO currently does not support VL, and the image has not been uploaded.
     os.environ['MAX_PIXELS'] = '1003520'
-    from swift.llm import rlhf_main, RLHFArguments, infer_main, InferArguments
+    from swift.llm import InferArguments, RLHFArguments, infer_main, rlhf_main
     result = rlhf_main(
         RLHFArguments(
             rlhf_type='ppo',

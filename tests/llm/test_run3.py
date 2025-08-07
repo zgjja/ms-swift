@@ -1,10 +1,9 @@
+import json
+import numpy as np
 import os
 import shutil
 import tempfile
 import unittest
-
-import json
-import numpy as np
 
 from swift.llm import MODEL_MAPPING, load_dataset
 

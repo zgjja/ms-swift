@@ -1,13 +1,12 @@
 import asyncio
+import json
 import os
 import re
 import textwrap
+import torch
 from collections import Counter
 from copy import deepcopy
 from typing import Dict, List, Optional
-
-import json
-import torch
 
 from swift.llm import PtEngine, RequestConfig, Template, to_device
 from swift.llm.infer.protocol import ChatCompletionResponse

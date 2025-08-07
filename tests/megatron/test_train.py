@@ -4,7 +4,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 
 
 def test_sft():
-    from swift.megatron import megatron_sft_main, MegatronTrainArguments
+    from swift.megatron import MegatronTrainArguments, megatron_sft_main
     megatron_sft_main(
         MegatronTrainArguments(
             load='Qwen2-7B-Instruct-mcore',
@@ -22,7 +22,7 @@ def test_sft():
 
 
 def test_pt():
-    from swift.megatron import megatron_pt_main, MegatronTrainArguments
+    from swift.megatron import MegatronTrainArguments, megatron_pt_main
     megatron_pt_main(
         MegatronTrainArguments(
             load='Qwen2-7B-mcore',

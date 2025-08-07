@@ -1,5 +1,4 @@
 import os
-
 import torch
 
 from swift.utils import get_device
@@ -9,6 +8,7 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 def test_qwen2():
     import os
+
     from swift.llm import get_model_tokenizer
     model, tokenizer = get_model_tokenizer('Qwen/Qwen2-7B-Instruct', load_model=False)
     print(f'model: {model}, tokenizer: {tokenizer}')

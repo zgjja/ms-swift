@@ -11,7 +11,7 @@ kwargs = {
 
 
 def test_llm():
-    from swift.llm import sft_main, TrainArguments
+    from swift.llm import TrainArguments, sft_main
     result = sft_main(
         TrainArguments(
             model='Qwen/Qwen3-Embedding-0.6B',

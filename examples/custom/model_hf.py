@@ -5,9 +5,8 @@ Here is another way to register the model, by customizing the get_function.
 The get_function just needs to return the model + tokenizer/processor.
 """
 
-from typing import Any, Dict
-
 from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
+from typing import Any, Dict
 
 from swift.llm import (InferRequest, Model, ModelGroup, ModelInfo, ModelMeta, PtEngine, RequestConfig, TemplateMeta,
                        register_model, register_template)

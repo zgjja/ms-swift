@@ -1,8 +1,7 @@
 import os
-from typing import TYPE_CHECKING, Optional
-
 import safetensors.torch
 import torch
+from typing import TYPE_CHECKING, Optional
 
 from swift.llm import deep_getattr, get_model_arch, get_multimodal_target_regex
 from swift.plugin import Tuner, extra_tuners

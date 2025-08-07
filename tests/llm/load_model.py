@@ -1,7 +1,6 @@
 import argparse
-from dataclasses import fields
-
 import torch
+from dataclasses import fields
 
 from swift.llm import MODEL_ARCH_MAPPING, ModelKeys, get_model_tokenizer
 

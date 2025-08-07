@@ -52,7 +52,7 @@ def test_eval_mllm():
 
 
 def test_eval_url():
-    from swift.llm import EvalArguments, eval_main, DeployArguments, run_deploy
+    from swift.llm import DeployArguments, EvalArguments, eval_main, run_deploy
     deploy_args = DeployArguments(model='Qwen/Qwen2-VL-7B-Instruct', infer_backend=infer_backend, verbose=False)
 
     with run_deploy(deploy_args, return_url=True) as url:

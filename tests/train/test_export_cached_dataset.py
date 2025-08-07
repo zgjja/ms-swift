@@ -1,5 +1,5 @@
 def test_export_cached_dataset():
-    from swift.llm import export_main, ExportArguments
+    from swift.llm import ExportArguments, export_main
     export_main(
         ExportArguments(
             model='Qwen/Qwen2.5-7B-Instruct',
@@ -11,7 +11,7 @@ def test_export_cached_dataset():
 
 
 def test_sft():
-    from swift.llm import sft_main, TrainArguments
+    from swift.llm import TrainArguments, sft_main
     sft_main(
         TrainArguments(
             model='Qwen/Qwen2.5-7B-Instruct',
